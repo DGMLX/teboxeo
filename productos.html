@@ -35,18 +35,54 @@
                 </ul>
             </div>
             <div>
-                <button class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5"></i></button>
+              <button type="button" class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></button>
             </div>
         </div>
         
       </nav>
+  <!-- MODAL CARRITO COMPRA-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Tus productos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <p>producto 1</p>
+            <p>$1990</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>producto 2</p>
+            <p>$5990</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>producto 3</p>
+            <p>$1990</p>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <p >Total</p>
+            <p>$40000</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary">Pagar</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  --------------------------------            -->
       <main>
         <div>
             <h1 class="text-center mt-5">Nuestros productos</h1>
         </div>
+          <div class="container">
 
-        <div class="card-deck d-flex justify-content-around mt-5">
+ 
             <div class="card col-3">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
@@ -79,7 +115,6 @@
             </div>
           </div>
     
-          <div class="card-deck d-flex justify-content-around mt-5">
             <div class="card col-3">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
@@ -111,8 +146,7 @@
               </div>
             </div>
           </div>
-    
-          <div class="card-deck d-flex justify-content-around mt-5">
+  
             <div class="card col-3">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
@@ -145,7 +179,38 @@
             </div>
           </div>
 
-          <div class="card-deck d-flex justify-content-around mt-5">
+            <div class="card col-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+            <div class="card col-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+            <div class="card col-3">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              </div>
+              <div class="card-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
+
             <div class="card col-3">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
@@ -178,7 +243,6 @@
             </div>
           </div>
     
-          <div class="card-deck d-flex justify-content-around mt-5">
             <div class="card col-3">
               <img class="card-img-top" src="..." alt="Card image cap">
               <div class="card-body">
@@ -210,59 +274,29 @@
               </div>
             </div>
           </div>
-    
-          <div class="card-deck d-flex justify-content-around mt-5">
-            <div class="card col-3">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer d-flex justify-content-center">
-                <button class="btn btn-primary">Agregar</button>
-              </div>
-            </div>
-            <div class="card col-3">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <div class="card-footer d-flex justify-content-center">
-                <button class="btn btn-primary">Agregar</button>
-              </div>
-            </div>
-            <div class="card col-3">
-              <img class="card-img-top" src="..." alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <div class="card-footer d-flex justify-content-center">
-                <button class="btn btn-primary">Agregar</button>
-              </div>
-            </div>
-          </div>
+        </div>
       </main>
 
-        <footer class="mt-5">
-            <div class="d-flex justify-content-around text-white">
-                <div>
-                    <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>Soluciones web</h6>
-                    <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@solucionweb.cl</p>
-                    <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
-                </div>
-                <div>
-                    <p><span class="span-footer">></span> <a href="nosotros.html" class="enlace text-white" >Sobre nosotros</a></p>
-                    <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Conoce nuestros servicios</a></p>
-                    <p><span class="span-footer">></span> <a href="proyectos.html" class="enlace text-white" >Proyectos realizados</a></p>
-                    <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
-                </div>
+      <footer class="mt-5">
+        <div class="d-flex justify-content-around text-white">
+            <div>
+                <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>TEBOXEOSTORE</h6>
+                <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@teboxeo.cl</p>
+                <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
             </div>
-            
-    
-    
-        </footer>
+            <div>
+                <p><span class="span-footer">></span> <a href="productos.html" class="enlace text-white" >Productos</a></p>
+                <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Servicios</a></p>
+                <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
+  
+            </div>
+        </div>
+
+        
+
+
+    </footer>
+
 
 
 

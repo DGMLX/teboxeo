@@ -35,30 +35,123 @@
                 </ul>
             </div>
             <div>
-                <button class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5"></i></button>
+                <button type="button" class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></button>
             </div>
         </div>
         
       </nav>
 
-        <footer class="mt-5">
-            <div class="d-flex justify-content-around text-white">
-                <div>
-                    <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>Soluciones web</h6>
-                    <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@solucionweb.cl</p>
-                    <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
+        <!-- MODAL CARRITO COMPRA-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Tus productos</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div>
-                    <p><span class="span-footer">></span> <a href="nosotros.html" class="enlace text-white" >Sobre nosotros</a></p>
-                    <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Conoce nuestros servicios</a></p>
-                    <p><span class="span-footer">></span> <a href="proyectos.html" class="enlace text-white" >Proyectos realizados</a></p>
-                    <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-between">
+                    <p>producto 1</p>
+                    <p>$1990</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>producto 2</p>
+                    <p>$5990</p>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p>producto 3</p>
+                    <p>$1990</p>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between">
+                    <p >Total</p>
+                    <p>$40000</p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary">Pagar</button>
+                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  --------------------------------            -->
+      <main>
+
+        <div class="container">
+            <h1 class="text-center pt-5 mb-5">No dudes en consultar</h1>
+            <div class="row d-flex justify-content-center justify-content-lg-around">
+                
+                <div class="col-12 col-lg-5 mb-5">
+                    <form class="form">
+                        <h2 class="text-center">Inicia sesión</h2>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fs-5">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label fs-5">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="*********" required  >
+                        </div>
+                        <div class="w-100 d-flex justify-content-center mt-5">
+                            <button class="btn btn-primary px-5">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-12 col-lg-5 mb-5">
+                    <form class="form">
+                        <h2 class="text-center">Registrate</h2>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fs-5">Nombre</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label fs-5">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label fs-5">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="*********" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label fs-5">Reescribe la Contraseña</label>
+                            <input type="password" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="*********" required>
+                        </div>
+                        <div class="w-100 d-flex justify-content-center mt-5">
+                            <button class="btn btn-primary px-5">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             
-    
-    
-        </footer>
+            </div>
+
+
+
+      </main>
+
+      <footer class="">
+        <div class="d-flex justify-content-around text-white">
+            <div>
+                <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>TEBOXEOSTORE</h6>
+                <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@teboxeo.cl</p>
+                <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
+            </div>
+            <div>
+                <p><span class="span-footer">></span> <a href="productos.html" class="enlace text-white" >Productos</a></p>
+                <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Servicios</a></p>
+                <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
+  
+            </div>
+        </div>
+
+        
+
+
+    </footer>
+
 
 
 

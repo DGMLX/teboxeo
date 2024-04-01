@@ -35,159 +35,75 @@
                 </ul>
             </div>
             <div>
-                <button class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5"></i></button>
+              <button type="button" class="btn btn-dark"><i class="bi bi-cart-fill text-white h3 m-5" data-bs-toggle="modal" data-bs-target="#exampleModal"></i></button>
             </div>
         </div>
         
       </nav>
 
+  <!-- MODAL CARRITO COMPRA-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Tus productos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <p>producto 1</p>
+            <p>$1990</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>producto 2</p>
+            <p>$5990</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p>producto 3</p>
+            <p>$1990</p>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <p >Total</p>
+            <p>$40000</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary">Pagar</button>
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  --------------------------------            -->
       <main class="">
-        <section class="mt-5 mb-5">
-            <div class="container">
-              <h1 class="text-center">Conoce nuestros servicios</h1>
-              <h2 class="mt-5 ms-lg-5 text-lg-start text-center">Codificación de tu sitio web </h2>
-                <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-3">
-                  <div class="col-12 col-md-6">
-                    <p class="me-lg-5 fs-5">Desarrollamos tu página con los lenguajes de la web desde cero, lo que nos permite tener control y acceso del código para modificaciones de cualquier elemento si es necesario.</p>
-                  </div>
-                  <div class="col-12 col-md-4" >
-                    <img src="service-1.png" class="img-service ms-lg-5" alt="">
-                  </div>
-                </div>
-<hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center">Diseño web responsive</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5">Hoy en día es fundamental que tu sitio web sea responsive, diseñamos tu sitio web a la medida para que pueda ser visto desde distintos dispositivos como celulares, tablets, notebook y computadoras de escritorio, el cual se adaptará según el tamaño de la pantalla. </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="imgpng3.png" class="img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                    
-                  </div>
-                </div>
-<hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center">Enlaces y botones vinculados a tus redes sociales</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5 ">
-                        Viculamos tus redes sociales como Instagram, WhatsApp, Facebook, Youtube, entre otras más, a través de iconos y botones para que tus futuros clientes puedan saber más acerca de tus servicios.
-                      </p>
-                    </div>
-                      <div class="col-12 col-md-4" >
-                        <img src="service-tres.png" class="img-sevice ms-lg-5 w-75" alt="">
-                      </div>
-                    
-                  </div>
-                </div>
-<hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center ">Incorporación de imágenes de tus servicios</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start  mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5">
-                        Mostramos a tus futuros clientes imágenes de tus servicios y productos, una imagen vale más que mil palabras.
-                      </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="service-4.png" class="img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                  </div>
-                </div>
-<hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center ">Creación de correos corporativos</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5"> 
-                        Te creamos un correo corporativo, el cual te ofrece un aspecto más profesional y confiable, este es vinculado a tu cuenta de correo electrónico para que los mensajes puedan ser vistos desde tu cuenta.
-                      </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="service-5.png" class=" img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                    
-                  </div>
-                </div>
-                <hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center ">Formularios de contacto</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5">
-                        Añadimos formularios de contacto, en donde tus clientes pueden enviarte un mensaje consultando por tus servicios al correo electrónico que tu desees.
-                      </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="service-6.png" class="img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                    
-                  </div>
-                </div>
+      
+       <h1 class="text-center mt-5">Nuestros servicios</h1>
 
-                <hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center ">Incorporación de animaciones web.</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                        <p class="me-lg-5 fs-5">
-                        Agregamos animaciones para que tus clientes puedan navegar en tu sitio web de una forma más amigable e interactiva.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="service-7.png" class=" img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                    
-                  </div>
-                </div>
+      </main>
 
 
-                <hr>
-                <div class="row">
-                  <h2 class="mt-5 ms-lg-5 text-lg-start text-center ">Dominio y hosting gratis por un año</h2>
-                  <div class="row d-flex justify-content-center justify-content-md-around align-items-center text-center text-md-start mt-5">
-                    <div class="col-12 col-md-6">
-                      <p class="me-lg-5 fs-5">Te proporcionamos un año de Dominio y Hosting de forma gratuita.<!-- Si no conoces estos terminos, puedes ir a la sección de blog y encontrarás algunos términos que quizás desconozcas.--> </p>
-                    </div>
-                    <div class="col-12 col-md-4" >
-                      <img src="service-8.png" class=" img-sevice ms-lg-5 w-75" alt="">
-                    </div>
-                    
-                  </div>
-                </div>
-
-                <div class="w-100 d-flex justify-content-center mt-4">
-                  <a class="text-center btn-section2 enlace" href="contacto.html">Solicita nuestros servicios</a>
-              </div>
-
+      <footer class="">
+        <div class="d-flex justify-content-around text-white">
+            <div>
+                <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>TEBOXEOSTORE</h6>
+                <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@teboxeo.cl</p>
+                <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
             </div>
-        </section>
-
-    </main>
-
-
-    <footer class="mt-5">
-
-            <div class="d-flex justify-content-around text-white">
-                <div>
-                    <h6 class="pt-2"><i class="bi bi-instagram me-2"></i>Soluciones web</h6>
-                    <p><i class="bi bi-envelope text-black me-2 text-white"></i>contacto@solucionweb.cl</p>
-                    <p><i class="bi bi-whatsapp me-2"></i>+56912345678</p>
-                </div>
-                <div>
-                    <p><span class="span-footer">></span> <a href="nosotros.html" class="enlace text-white" >Sobre nosotros</a></p>
-                    <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Conoce nuestros servicios</a></p>
-                    <p><span class="span-footer">></span> <a href="proyectos.html" class="enlace text-white" >Proyectos realizados</a></p>
-                    <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
-                </div>
+            <div>
+                <p><span class="span-footer">></span> <a href="productos.html" class="enlace text-white" >Productos</a></p>
+                <p><span class="span-footer">></span> <a href="servicios.html" class="enlace text-white" >Servicios</a></p>
+                <p><span class="span-footer">></span> <a href="contacto.html" class="enlace text-white" >Contáctanos</a></p>
+  
             </div>
-            
-    
+        </div>
+
+        
+
 
     </footer>
+
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
