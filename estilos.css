@@ -40,3 +40,20 @@ form{
     border-radius: 2rem;
     box-shadow: .6rem .6rem 1rem gray ;
 }
+
+
+/* --------------------------------------------ESTILOS INTERSECTION---------------------------------------------*/
+
+
+.estilo-intersection{
+    opacity: 0;
+    transform: scale(0.5);
+    
+}
+
+.visible{
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1);
+}
+
