@@ -14,8 +14,9 @@ const intersection13 = document.getElementById("intersection13");
 const intersection14 = document.getElementById("intersection14");
 const intersection15 = document.getElementById("intersection15");
 
-
-
+const seccionUsuarios = document.getElementById("usuarios");
+let usuarios=[]
+let imgUsuarios= []
 
 const cargarIntersection = entradas=>{
     entradas.forEach(entrada=>{
@@ -27,16 +28,49 @@ const cargarIntersection = entradas=>{
     )
 }
 
-
 const observador = new IntersectionObserver(cargarIntersection,{
     root:null,
     rootMargin:"0px 0px 0px 0px",
     threshold:0.5
 }
 );
+for (let i = 0; i < 10; i++) {
+    async function obtenerImg(){
+        const respuesta = await fetch('https://randomuser.me/api/')
+        const datos = await respuesta.json()
+        imgUsuarios.push(datos.results[0].picture.large)  
+    }
+    obtenerImg()
+}
+async function obtenerDatos(){
+    const respuesta = await fetch('https://jsonplaceholder.typicode.com/users')
+    const datos = await respuesta.json()
+    datos.map(dat=>{
+        usuarios.push(dat)
+    })
+}  
+obtenerDatos()
 
+function llenarDatos(){
+    for (let i = 0; i < 10; i++) {
+        const contenedor = document.createElement("div");
+        const nombreUsuario = document.createElement("h5");
+        const imagenUsuario = document.createElement("img");
 
+        nombreUsuario.textContent = usuarios[i].name
+        imagenUsuario.src = imgUsuarios[i]
+        
+        contenedor.appendChild(imagenUsuario);
+        contenedor.appendChild(nombreUsuario);
 
+        seccionUsuarios.appendChild(contenedor);
+    }
+}
+
+console.log(usuarios)
+console.log(imgUsuarios)
+
+llenarDatos();
 
 observador.observe(intersection1);
 observador.observe(intersection2);
@@ -53,3 +87,7 @@ observador.observe(intersection12);
 observador.observe(intersection13);
 observador.observe(intersection14);
 observador.observe(intersection15);
+
+
+    
+                
