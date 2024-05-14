@@ -50,24 +50,8 @@
               <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Tus productos</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" >
-              <div class="d-flex justify-content-between">
-                <p>Guantes de entrenamiento</p>
-                <p>$20.990</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p>Short Everlast</p>
-                <p>$25.4990</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p>Vendas</p>
-                <p>$3.990</p>
-              </div>
-              <hr>
-              <div class="d-flex justify-content-between">
-                <p >Total</p>
-                <p>$50.470</p>
-              </div>
+            <div class="modal-body" id="modalProductos">
+      
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary">Pagar</button>
@@ -128,7 +112,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$29.990</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5 mx-2 producto estilo-intersection" id="intersection2">
@@ -140,7 +124,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$89.990</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection3">
@@ -152,7 +136,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$12.990</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
         </div>
 
@@ -166,7 +150,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$39.990</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection5">
@@ -177,7 +161,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$25.490</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
         </div>
         <div class="card col-10 col-md-5 col-lg-3 mb-5  mx-2 producto estilo-intersection" id="intersection6">
@@ -188,7 +172,7 @@
           </div>
           <div class="card-footer d-flex justify-content-between">
             <h4 class="text-success">$119.990</h4>
-            <button class="btn btn-primary">Agregar</button>
+            <button class="btn btn-primary boton-producto">Agregar</button>
           </div>
       </div>
       </div>
@@ -232,8 +216,11 @@
         <button class="btn btn-primary px-5"><a href="servicios.html" class="text-white text-decoration-none">Más información</a></button>
       </div>
 
-      <div id="usuarios">
+      <div>
+          <h3 class="text-center mt-5 mb-5">Alumnos destacados</h3>
+          <div id="usuarios" class="d-flex flex-wrap justify-content-center">
 
+          </div>
 
       </div>
 
@@ -256,10 +243,6 @@
       
                 </div>
             </div>
-
-            
-    
-    
         </footer>
 
 

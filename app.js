@@ -14,9 +14,26 @@ const intersection13 = document.getElementById("intersection13");
 const intersection14 = document.getElementById("intersection14");
 const intersection15 = document.getElementById("intersection15");
 
+const botonProducto = document.querySelectorAll(".boton-producto")
+const contenedorModal = document.getElementById("modalProductos");
 const seccionUsuarios = document.getElementById("usuarios");
+
 let usuarios=[]
 let imgUsuarios= []
+let productos = JSON.parse(localStorage.getItem("productos")) || []
+
+for (let i = 0; i < botonProducto.length; i++) {
+    botonProducto[i].addEventListener("click",()=>{
+        const nombreProducto = botonProducto[i].parentElement.parentElement.querySelector(".card-title").textContent
+        const precioProducto = botonProducto[i].parentElement.querySelector("h4").textContent
+        const objetoProducto = {nombre:nombreProducto,precio:precioProducto}
+        productos.push(objetoProducto)
+        agregarProductosModal()
+        localStorage.setItem("productos",JSON.stringify(productos))
+    
+    })
+}
+
 
 const cargarIntersection = entradas=>{
     entradas.forEach(entrada=>{
@@ -42,12 +59,14 @@ for (let i = 0; i < 10; i++) {
     }
     obtenerImg()
 }
+
 async function obtenerDatos(){
     const respuesta = await fetch('https://jsonplaceholder.typicode.com/users')
     const datos = await respuesta.json()
     datos.map(dat=>{
         usuarios.push(dat)
     })
+    
 }  
 obtenerDatos()
 
@@ -55,22 +74,51 @@ function llenarDatos(){
     for (let i = 0; i < 10; i++) {
         const contenedor = document.createElement("div");
         const nombreUsuario = document.createElement("h5");
+        const contenedorImg = document.createElement("div");
         const imagenUsuario = document.createElement("img");
-
+        contenedor.classList.add("col-5",'col-md-4','col-lg-3')
+        nombreUsuario.classList.add("mt-3","text-center")
+        contenedorImg.classList.add('d-flex','justify-content-center');
+        imagenUsuario.classList.add("mt-3")
         nombreUsuario.textContent = usuarios[i].name
         imagenUsuario.src = imgUsuarios[i]
+        contenedorImg.appendChild(imagenUsuario)
         
-        contenedor.appendChild(imagenUsuario);
+        contenedor.appendChild(contenedorImg)
         contenedor.appendChild(nombreUsuario);
 
         seccionUsuarios.appendChild(contenedor);
     }
 }
+setTimeout(() => {
+    llenarDatos()
+}, 5000);
 
 console.log(usuarios)
 console.log(imgUsuarios)
 
-llenarDatos();
+function agregarProducto(producto){
+    console.log(producto)
+}
+
+function agregarProductosModal(){
+    productos.forEach(producto=>{
+        const contenedor = document.createElement("div");
+        const nombreProducto = document.createElement("p");
+        const precioProducto = document.createElement("p");
+        
+        contenedor.classList.add("d-flex","justify-content-between");
+        nombreProducto.textContent = producto.nombre;
+        precioProducto.textContent = producto.precio;
+        
+        contenedor.appendChild(nombreProducto);
+        contenedor.appendChild(precioProducto);
+
+        contenedorModal.appendChild(contenedor);
+    })
+
+
+}
 
 observador.observe(intersection1);
 observador.observe(intersection2);
