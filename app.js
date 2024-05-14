@@ -17,6 +17,10 @@ const intersection15 = document.getElementById("intersection15");
 const botonProducto = document.querySelectorAll(".boton-producto")
 const contenedorModal = document.getElementById("modalProductos");
 const seccionUsuarios = document.getElementById("usuarios");
+const inputPassword = document.getElementById("exampleFormControlTextarea1").value;
+
+
+
 
 let usuarios=[]
 let imgUsuarios= []
