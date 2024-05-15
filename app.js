@@ -17,13 +17,20 @@ const intersection15 = document.getElementById("intersection15");
 const botonProducto = document.querySelectorAll(".boton-producto")
 const contenedorModal = document.getElementById("modalProductos");
 const seccionUsuarios = document.getElementById("usuarios");
+const botonPagar = document.getElementById('btnPagar');
+const botonVaciar = document.getElementById('btnVaciar')
 
 
 let usuarios=[]
 let imgUsuarios= []
 let productos = JSON.parse(localStorage.getItem("productos")) || []
 
-console.log(JSON.parse(localStorage.getItem("productos")))
+botonVaciar.addEventListener('click',()=>{
+    productos=[]
+    limpiarHTML()
+    localStorage.removeItem('productos')
+})
+//console.log(JSON.parse(localStorage.getItem("productos")))
 
 if(JSON.parse(localStorage.getItem("productos"))){
     JSON.parse(localStorage.getItem("productos")).forEach(producto=>{
@@ -41,6 +48,8 @@ if(JSON.parse(localStorage.getItem("productos"))){
         contenedorModal.appendChild(contenedor);
     })
 }
+
+botonPagar.addEventListener('click',()=>productos.length===0 ? alert('No tienes productos en el carrito') : alert('Pagando....'))
 
 for (let i = 0; i < botonProducto.length; i++) {
     botonProducto[i].addEventListener("click",()=>{
@@ -64,6 +73,12 @@ const cargarIntersection = entradas=>{
         }
     }
     )
+}
+
+function limpiarHTML(){
+    while(contenedorModal.firstChild){
+        contenedorModal.removeChild(contenedorModal.firstChild);
+    }
 }
 
 const observador = new IntersectionObserver(cargarIntersection,{
@@ -123,6 +138,8 @@ function agregarProducto(producto){
 }
 
 function agregarProductosModal(){
+    limpiarHTML()
+    alert('Producto agregado')
     productos.forEach(producto=>{
         const contenedor = document.createElement("div");
         const nombreProducto = document.createElement("p");
