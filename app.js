@@ -17,21 +17,38 @@ const intersection15 = document.getElementById("intersection15");
 const botonProducto = document.querySelectorAll(".boton-producto")
 const contenedorModal = document.getElementById("modalProductos");
 const seccionUsuarios = document.getElementById("usuarios");
-const inputPassword = document.getElementById("exampleFormControlTextarea1").value;
-
-
 
 
 let usuarios=[]
 let imgUsuarios= []
 let productos = JSON.parse(localStorage.getItem("productos")) || []
 
+console.log(JSON.parse(localStorage.getItem("productos")))
+
+if(JSON.parse(localStorage.getItem("productos"))){
+    JSON.parse(localStorage.getItem("productos")).forEach(producto=>{
+        const contenedor = document.createElement("div");
+        const nombreProducto = document.createElement("p");
+        const precioProducto = document.createElement("p");
+        
+        contenedor.classList.add("d-flex","justify-content-between");
+        nombreProducto.textContent = producto.nombre;
+        precioProducto.textContent = producto.precio;
+        
+        contenedor.appendChild(nombreProducto);
+        contenedor.appendChild(precioProducto);
+
+        contenedorModal.appendChild(contenedor);
+    })
+}
+
 for (let i = 0; i < botonProducto.length; i++) {
     botonProducto[i].addEventListener("click",()=>{
         const nombreProducto = botonProducto[i].parentElement.parentElement.querySelector(".card-title").textContent
         const precioProducto = botonProducto[i].parentElement.querySelector("h4").textContent
         const objetoProducto = {nombre:nombreProducto,precio:precioProducto}
-        productos.push(objetoProducto)
+        productos= [...productos,objetoProducto]
+
         agregarProductosModal()
         localStorage.setItem("productos",JSON.stringify(productos))
     

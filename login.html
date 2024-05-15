@@ -43,42 +43,7 @@
         
       </nav>
 
-        <!-- MODAL CARRITO COMPRA-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Tus productos</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex justify-content-between">
-                        <p>Guantes de entrenamiento</p>
-                        <p>$20.990</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p>Short Everlast</p>
-                        <p>$25.4990</p>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <p>Vendas</p>
-                        <p>$3.990</p>
-                      </div>
-                      <hr>
-                      <div class="d-flex justify-content-between">
-                        <p >Total</p>
-                        <p>$50.470</p>
-                      </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary">Pagar</button>
-                  <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-    
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  --------------------------------            -->
+       
       <main class="">
 
         <div class="container">
@@ -89,16 +54,17 @@
                     <form class="form">
                         <h2 class="text-center">Inicia sesión</h2>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label fs-5">Correo electrónico</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com" required>
+                            <label for="correoLogin" class="form-label fs-5">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correoLogin" placeholder="correo@correo.com" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label fs-5">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="*********" required  >
+                            <label for="contraLogin" class="form-label fs-5">Contraseña</label>
+                            <input type="password" class="form-control" id="contraLogin" rows="3" placeholder="*********" required  >
                         </div>
                         <div class="w-100 d-flex justify-content-center mt-5">
-                            <button class="btn btn-primary px-5">Enviar</button>
+                            <button class="btn btn-primary px-5" id="botonLogin" type="submit">Enviar</button>
                         </div>
+                        <div id="mensajeLogin"></div>
                     </form>
                 </div>
 
@@ -106,21 +72,22 @@
                     <form class="form">
                         <h2 class="text-center">Registrate</h2>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label fs-5">Nombre</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre" required>
+                            <label for="nombreRegistro" class="form-label fs-5">Nombre</label>
+                            <input type="text" class="form-control" id="nombreRegistro" placeholder="Ingresa tu nombre" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label fs-5">Correo electrónico</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@correo.com" required>
+                            <label for="correoRegistro" class="form-label fs-5">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correoRegistro" placeholder="correo@correo.com" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label fs-5">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="*********" required>
+                            <label for="contraRegistro" class="form-label fs-5">Contraseña</label>
+                            <input type="password" class="form-control" id="contraRegistro" rows="3" placeholder="*********" required>
                             
                         </div>
                         <div class="w-100 d-flex justify-content-center mt-5">
-                            <button class="btn btn-primary px-5">Enviar</button>
+                            <button class="btn btn-primary px-5" id="botonRegistro" type="submit">Enviar</button>
                         </div>
+                        <div id="mensajeRegistro"></div>
                     </form>
                 </div>
             </div>
@@ -155,5 +122,6 @@
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="login.js"></script>
 </body>
 </html>
